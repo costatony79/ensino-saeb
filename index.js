@@ -252,6 +252,6 @@ app.post("/deletargeografia", (req, res) => {
 
 
 //servidor
-app.listen(1010, ()=>{
-    console.log("Servidor Rodando na porta 1010");
+app.listen(1517, ()=>{
+    console.log("Servidor Rodando na porta 1517");
 });
