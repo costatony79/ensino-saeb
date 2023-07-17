@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>GEOGRAFIA</title>
+</head>
+<body>
+<hr>
+<div class="container">
+    <div class="h1 text-center">GABARITOS DO TRABALHO DE GEOGRAFIA</div>
+</div>
+<hr>
+<div class="container-fluid">
+                
+                <% geografia.forEach((geografia) => { %>
+                    <table class="table table-bordered table-sm">
+                    <tbody>
+                    <tr>
+                        <th class="align-middle">NOME</th>
+                        <th class="align-middle">Q1</th>
+                        <th class="align-middle">Q2</th>
+                        <th class="align-middle">Q3</th>
+                        <th class="align-middle">Q4</th>
+                        <th class="align-middle">Q5</th>
+                        <th class="align-middle">Q6</th>
+                        <th class="align-middle">Q7</th>
+                        <th class="align-middle">Q8</th>
+                        <th class="align-middle">Q9</th>
+                        <th class="align-middle">Q10</th>
+                        <th class="align-middle">NOTA</th>
+                        <th class="align-middle">AÇÃO</th>                   
+                    </tr>
+                   
+                    <tr>
+                        <td class="align-middle text-nowrap"><%= geografia.nome %></td>
+                        <td class="align-middle">
+                            <%= geografia.q1 %>
+                            <%
+                                if(geografia.q1=="B"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q2 %>
+                            <% 
+                                if(geografia.q2 == "A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q3 %>
+                            <% 
+                                if(geografia.q3 == "C"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        
+                        <td class="align-middle">
+                            <%= geografia.q4 %>
+                            <% 
+                                if(geografia.q4 == "D"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q5 %>
+
+                            <% 
+                                if(geografia.q5 == "B"){
+                                    total++
+                                }
+                            %>
+                        
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q6 %>
+                            <% 
+                                if(geografia.q6 == "D"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q7 %>
+                            <% 
+                                if(geografia.q7 == "A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q8 %>
+                            <% 
+                                if(geografia.q8 == "D"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q9 %>
+                            <% 
+                                if(geografia.q9 == "A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= geografia.q10 %>
+                            <% 
+                                if(geografia.q10 == "C"){
+                                    total++
+                                }
+                            %>
+                        </td>
+
+                        <td class="align-middle"><%= total * 3%></td>
+                        <% total = 0 %>
+
+                        <td class="align-middle">
+                            <form method="POST" action="/deletargeografia">
+                                <input type="hidden" name="id" value="<%=geografia.id%>">
+                                <button class="btn btn-danger">Deletar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+                
+            </tbody>
+        </table>
+</div>
+
+</body>
+
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/popper.min.js"></script>
+</html>

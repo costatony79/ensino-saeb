@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>HISTÓRIA</title>
+</head>
+<body>
+<hr>
+<div class="container">
+    <div class="h1 text-center">GABARITOS DO TRABALHO DE HISTÓRIA</div>
+</div>
+<hr>
+<div class="container-fluid">
+                
+                <% historia.forEach((historia) => { %>
+                    <table class="table table-bordered table-sm">
+                    <tbody>
+                    <tr>
+                        <th class="align-middle">NOME</th>
+                        <th class="align-middle">Q1</th>
+                        <th class="align-middle">Q2</th>
+                        <th class="align-middle">Q3</th>
+                        <th class="align-middle">Q4</th>
+                        <th class="align-middle">Q5</th>
+                        <th class="align-middle">Q6</th>
+                        <th class="align-middle">Q7</th>
+                        <th class="align-middle">Q8</th>
+                        <th class="align-middle">Q9</th>
+                        <th class="align-middle">Q10</th>
+                        <th class="align-middle">Q11</th>
+                        <th class="align-middle">Q12</th>
+                        <th class="align-middle">Q13</th>
+                        <th class="align-middle">Q14</th>
+                        <th class="align-middle">Q15</th>
+                        <th class="align-middle">Q16</th>
+                        <th class="align-middle">Q17</th>
+                        <th class="align-middle">Q18</th>
+                        <th class="align-middle">Q19</th>
+                        <th class="align-middle">Q20</th>
+                        <th class="align-middle">NOTA</th>
+                        <th class="align-middle">AÇÃO</th>                   
+                    </tr>
+                   
+                    <tr>
+                        <td class="align-middle text-nowrap"><%= historia.nome %></td>
+                        <td class="align-middle">
+                            <%= historia.q1 %>
+                            <%
+                                if(historia.q1=="A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q2 %>
+                            <% 
+                                if(historia.q2 == "C"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q3 %>
+                            <% 
+                                if(historia.q3 == "B"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        
+                        <td class="align-middle">
+                            <%= historia.q4 %>
+                            <% 
+                                if(historia.q4 == "B"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q5 %>
+
+                            <% 
+                                if(historia.q5 == "D"){
+                                    total++
+                                }
+                            %>
+                        
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q6 %>
+                            <% 
+                                if(historia.q6 == "A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q7 %>
+                            <% 
+                                if(historia.q7 == "C"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q8 %>
+                            <% 
+                                if(historia.q8 == "D"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q9 %>
+                            <% 
+                                if(historia.q9 == "A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q10 %>
+                            <% 
+                                if(historia.q10 == "C"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q11 %>
+                            <%
+                                if(historia.q11=="C"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q12 %>
+                            <% 
+                                if(historia.q12 == "B"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q13 %>
+                            <% 
+                                if(historia.q13 == "A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        
+                        <td class="align-middle">
+                            <%= historia.q14 %>
+                            <% 
+                                if(historia.q14 == "D"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q15 %>
+                            <% 
+                                if(historia.q15 == "B"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q16 %>
+                            <% 
+                                if(historia.q16 == "B"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q17 %>
+                            <% 
+                                if(historia.q17 == "D"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q18 %>
+                            <% 
+                                if(historia.q18 == "A"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q19 %>
+                            <% 
+                                if(historia.q19 == "B"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle">
+                            <%= historia.q20 %>
+                            <% 
+                                if(historia.q20 == "C"){
+                                    total++
+                                }
+                            %>
+                        </td>
+                        <td class="align-middle"><%= total * 1.5 %></td>
+                        <% total = 0 %>
+
+                        <td class="align-middle">
+                            <form method="POST" action="/deletarhistoria">
+                                <input type="hidden" name="id" value="<%=historia.id%>">
+                                <button class="btn btn-danger">Deletar</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% }) %>
+                
+            </tbody>
+        </table>
+</div>
+
+</body>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/script.js"></script>
+</html>
