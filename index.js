@@ -128,6 +128,6 @@ app.post("/deletarlpd1", (req, res) => {
 
 
 //servidor
-app.listen(1517, ()=>{
-    console.log("Servidor Rodando na porta 1517");
+app.listen(1519, ()=>{
+    console.log("ENSINO-SAEB SENDO EXECUTADO NA PORTA 1519");
 });
