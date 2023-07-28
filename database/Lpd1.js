@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 const connection = require("./database");
 
-const Geografia = connection.define("geografia", {
+const Lpd1 = connection.define("lpd1", {
     nome:{
         type: Sequelize.STRING,
         allowNull: false,
@@ -49,6 +49,6 @@ const Geografia = connection.define("geografia", {
     
 });
 
-Geografia.sync({force: false}).then(() => {});
+Lpd1.sync({force: false}).then(() => {});
 
-module.exports = Geografia;
+module.exports = Lpd1;
